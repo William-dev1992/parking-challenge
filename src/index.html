@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+
+  <script src="./script.js" defer></script>
+  <script src="../public/scripts/UX.js" defer></script>
+  <link rel="stylesheet" href="../public/styles/style.css">
+  <link rel="stylesheet" href="../public/styles/header.css">
+
+  <link rel="shortcut icon" href="../public/images/parking_icon.png" type="image/x-icon">
+
+  <title>Parking Tracker</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div>P</div>
+      </div>
+
+      <div class="nav-bar">
+        <input type="checkbox" name="toggler" id="toggler">
+        <div onclick="OpenCloseMenu()" class="menu-btn">
+          <div class="menu-btn-burger"></div>
+        </div>
+
+        <div class="menu">
+          <div>
+            <ul>
+              <li><button>Entrada</button></li>
+              <li><button>Saída</button></li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+    </header>
+
+    <main>
+      <div id="buttons">
+        <button class="active">Entrada</button>
+        <button>Saída</button>
+      </div>
+
+      <div class="plateInfo-IN">
+        <label for="plate">Número da placa:</label>
+        <input oninput="verifyInput()" type="text" placeholder="AAA-0000">
+        <button disabled>CONFIRMAR ENTRADA</button>
+      </div>
+
+      <div id="hide" class="plateInfo-Out">
+        <label for="plate">Número da placa:</label>
+        <input oninput="verifyInput()" type="text" placeholder="AAA-0000">
+        <button disabled onclick="showPayModal()">PAGAMENTO</button>
+        <button disabled onclick="showLiberateModal()">SAÍDA</button>
+        <a href="#">Ver histórico</a>
+      </div>
+    </main>
+  </div>
+
+  <div id="hide" class="modal-overlay payment">
+    <div class="modal">
+      <p>Confirmar o pagamento da placa abaixo?</p>
+      <h2></h2>
+      <button>CONFIRMAR</button>
+      <button onclick="hideModal(event)">VOLTAR</button>
+    </div>
+  </div>
+
+  <div id="hide" class="modal-overlay liberate">
+    <div class="modal">
+      <p>Confirmar a saída do veiculo da placa abaixo?</p>
+      <h2></h2>
+      <button>LIBERAR SAÍDA</button>
+      <button onclick="hideModal(event)">VOLTAR</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,291 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+  --background: #F2F2F2;
+  --background-light-blue: #4DD0E1;
+  --text-light-blue: #00BCD4;
+  --gray-text: #9B9B9B;
+  --dark-gray-text: #4A4A4A;
+
+  --gray-border: #CCCCCC;
+  --green-button: #28DD91;
+  --purple-button: #A769B2;
+  --gray-button: #DADADA;
+
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+.container{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+button{
+  cursor: pointer;
+}
+
+/*Initial view*/
+
+  /*Hide*/
+    #hide{
+      visibility: hidden;
+      display: none;
+      z-index: 0;
+    }
+  /**/
+
+  /*Buttons && Links*/
+
+  .container main #buttons{
+    width: 80%;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .container main #buttons button{
+    width: 50%;
+    height: 100%;
+    border: none;
+    background: none;
+
+    color: var(--gray-text);
+    font-size: 1rem;
+    outline: none;
+  }
+
+  .container main #buttons button.active{
+    width: 50%;
+    height: 100%;
+    border: none;
+
+    background: var(--white);
+    color: var(--text-light-blue);
+    border-bottom: 3px solid var(--background-light-blue);
+
+    transition: all 0.2s ease;
+    outline: none;
+  }
+
+  .container main .plateInfo-IN button{
+    width: 100%;
+    height: 4.1rem;
+    background: var(--green-button);
+    color: var(--white);
+  
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+  
+    margin: 0.5rem 0;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+  }
+
+  .container main .plateInfo-Out button:first-of-type,
+  .container main .plateInfo-Out button:last-of-type{
+    width: 100%;
+    height: 4.1rem;
+  
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+  
+    margin: 0.5rem 0;
+    border-radius: 4px;
+  }
+
+  .container main .plateInfo-Out button:first-of-type{
+    background: var(--purple-button);
+    color: var(--white);
+    border: none;
+  }
+
+  .container main .plateInfo-Out button:last-of-type{
+    background: var(--white);
+    color: var(--purple-button);
+  
+    border: 1px solid var(--purple-button);
+  }
+
+  .container main .plateInfo-Out a{
+    color: var(--text-light-blue);
+    width: 100%;
+    height: 4.1rem;
+  
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0.5rem 0;
+    border-radius: 4px;
+  }
+
+
+  .container main .plateInfo-IN button:disabled,
+  .container main .plateInfo-Out button:disabled{
+    width: 100%;
+    height: 4.1rem;
+    background: var(--gray-button);
+    color: var(--gray-text);
+  
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+  
+    margin: 0.5rem 0;
+    border: 1px solid var(--gray-border);
+    border-radius: 4px;
+  }
+
+  .container main .plateInfo-Out button:last-of-type:disabled{
+    background: var(--white);
+  }
+
+  /**/
+
+.container main{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--background);
+}
+
+.container main .plateInfo-IN{
+  width: 80%;
+  height: 17.5rem;
+  background: var(--white);
+  
+  padding: 1rem;
+}
+
+.container main .plateInfo-Out{
+  width: 80%;
+  height: 22.5rem;
+  background: var(--white);
+  
+  padding: 1rem;
+}
+
+.container main .plateInfo-IN label,
+.container main .plateInfo-Out label{
+  font-size: 1rem;
+  color: var(--gray-text);
+}
+
+.container main .plateInfo-IN input,
+.container main .plateInfo-Out input{
+  width: 100%;
+  height: 4.1rem;
+
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--black);
+  text-transform: uppercase;
+  outline: none;
+
+  margin: 0.5rem 0;
+  border: 1px solid var(--gray-border);
+  border-radius: 4px;
+}
+
+.container main .plateInfo-IN input::placeholder,
+.container main .plateInfo-Out input::placeholder{
+  color: var(--gray-text);
+}
+
+  /*Modal*/
+  .modal-overlay{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.479);
+  }
+
+  .modal{
+    width: 21rem;
+    height: 18rem;
+
+    background: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+
+  .modal p{
+    width: 70%;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--dark-gray-text);
+  }
+
+  .modal h2{
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: var(--text-light-blue);
+
+    text-transform: uppercase;
+  }
+
+  .modal button:first-of-type{
+    width: 19.5rem;
+    height: 4.2rem;
+    margin-top: 1rem;
+
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+    background: var(--purple-button);
+    border: none;
+  }
+
+  .modal button:last-of-type{
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-light-blue);
+
+    margin-top: 1.5rem;
+  }
+
+  /**/
