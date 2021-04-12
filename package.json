@@ -1,0 +1,23 @@
+{
+  "name": "parking",
+  "version": "1.0.0",
+  "description": "This a parking web app, used to keep track of cars/motorcycles in the parking lot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/William-dev1992/parking-challenge.git"
+  },
+  "keywords": [
+    "js",
+    "challenge"
+  ],
+  "author": "William Ferreira <williamferreira132003@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/William-dev1992/parking-challenge/issues"
+  },
+  "homepage": "https://github.com/William-dev1992/parking-challenge#readme"
+}
