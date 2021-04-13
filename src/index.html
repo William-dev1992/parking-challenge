@@ -11,7 +11,9 @@
 
   <script src="./script.js" defer></script>
   <script src="../public/scripts/UX.js" defer></script>
-  <link rel="stylesheet" href="../public/styles/style.css">
+
+  <link rel="stylesheet" href="../public/styles/root.css">
+  <link rel="stylesheet" href="../public/styles/initialPage.css">
   <link rel="stylesheet" href="../public/styles/header.css">
 
   <link rel="shortcut icon" href="../public/images/parking_icon.png" type="image/x-icon">
@@ -21,7 +23,7 @@
 <body>
   <div class="container">
     <header>
-      <div class="logo">
+      <div href="./index.html" class="logo">
         <div>P</div>
       </div>
 
@@ -34,8 +36,8 @@
         <div class="menu">
           <div>
             <ul>
-              <li><button>Entrada</button></li>
-              <li><button>Saída</button></li>
+              <li><a href="./index.html"><button>Entrada</button></a></li>
+              <li><a href="./index.html"><button>Saída</button></a></li>
             </ul>
           </div>
         </div> 
@@ -59,7 +61,7 @@
         <input oninput="verifyInput()" type="text" placeholder="AAA-0000">
         <button disabled onclick="showPayModal()">PAGAMENTO</button>
         <button disabled onclick="showLiberateModal()">SAÍDA</button>
-        <a href="#">Ver histórico</a>
+        <a href="./plateHistoric.html">Ver histórico</a>
       </div>
     </main>
   </div>

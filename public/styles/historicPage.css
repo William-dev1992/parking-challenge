@@ -1,0 +1,58 @@
+main{
+  width: 100vw;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: var(--background);
+
+  padding-top: 1rem;
+}
+
+main .info_plate_historic{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  width: 85%;
+  height: auto;
+  border-radius: 4px;
+  padding: 1rem;
+  background: var(--white);
+}
+
+main .info_plate_historic h2{
+  color: var(--text-light-blue);
+  font-weight: 600;
+  font-size: 1.5rem;
+
+  margin-bottom: 1rem;
+}
+
+main .info_plate_historic .card{
+  display: flex;
+  justify-content: space-between;
+
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--light-gray-border);
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+main .info_plate_historic .card .info h3{
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: var(--dark-green-text);
+}
+
+main .info_plate_historic .card .info p{
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--gray-text);
+}
